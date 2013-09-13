@@ -112,10 +112,10 @@
 
 	, pause: function (e) {
 			if (!e) this.paused = true
-			if (this.$element.find('.next, .prev').length && $.support.transition.end) {
+			/*if (this.$element.find('.next, .prev').length && $.support.transition.end) {
 				this.$element.trigger($.support.transition.end)
 				this.cycle()
-			}
+			}*/
 			clearInterval(this.interval)
 			this.interval = null
 			return this
@@ -246,7 +246,7 @@
 	}
 
 	$.fn.carousel.defaults = {
-		interval: 5000
+		interval: false;//5000
 	, pause: 'hover'
 	}
 
